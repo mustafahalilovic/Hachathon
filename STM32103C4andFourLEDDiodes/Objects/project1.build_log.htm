@@ -1,0 +1,390 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Mustafa Halilovic, noNe, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.35.0.2
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Korisnik\Desktop\Github\STM32\Projekat 1\project1.uvprojx
+Project File Date:  01/02/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.cpp(9): warning: no previous extern declaration for non-static variable 'speed' [-Wmissing-variable-declarations]
+int speed = 10000;
+    ^
+main.cpp(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int speed = 10000;
+^
+main.cpp(15): warning: use of old-style cast [-Wold-style-cast]
+        RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
+        ^~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1448): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                                             ^~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1357): note: expanded from macro 'RCC_BASE'
+#define RCC_BASE              (AHBPERIPH_BASE + 0x1000)
+                               ^~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1289): note: expanded from macro 'AHBPERIPH_BASE'
+#define AHBPERIPH_BASE        (PERIPH_BASE + 0x20000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(15): warning: use of old-style cast [-Wold-style-cast]
+        RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
+        ^~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1448): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+main.cpp(15): warning: use of old-style cast [-Wold-style-cast]
+        RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
+                        ^~~~~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(2051): note: expanded from macro 'RCC_APB2ENR_IOPAEN'
+#define  RCC_APB2ENR_IOPAEN                  ((uint32_t)0x00000004)         /*!< I/O port A clock enable */
+                                              ^         ~~~~~~~~~~
+main.cpp(19): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL |=  (1<<0)|(1<<1);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(19): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL |=  (1<<0)|(1<<1);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(20): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL &=~ (1<<2)|(1<<3);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(20): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL &=~ (1<<2)|(1<<3);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(20): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->CRL &=~ (1<<2)|(1<<3);
+                   ~~~~~~~~~~^~~~~~~
+main.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL |=  (1<<4)|(1<<5);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL |=  (1<<4)|(1<<5);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(23): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL &=~ (1<<6)|(1<<7);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(23): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL &=~ (1<<6)|(1<<7);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(23): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->CRL &=~ (1<<6)|(1<<7);
+                   ~~~~~~~~~~^~~~~~~
+main.cpp(25): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL |=  (1<<8)|(1<<9);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(25): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL |=  (1<<8)|(1<<9);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(26): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL &=~ (1<<10)|(1<<11);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(26): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL &=~ (1<<10)|(1<<11);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(26): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->CRL &=~ (1<<10)|(1<<11);
+                   ~~~~~~~~~~~^~~~~~~~
+main.cpp(28): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL |=  (1<<12)|(1<<13);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(28): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL |=  (1<<12)|(1<<13);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(29): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL &=~ (1<<14)|(1<<15);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(29): warning: use of old-style cast [-Wold-style-cast]
+        GPIOA->CRL &=~ (1<<14)|(1<<15);
+        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(29): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->CRL &=~ (1<<14)|(1<<15);
+                   ~~~~~~~~~~~^~~~~~~~
+main.cpp(33): warning: use of old-style cast [-Wold-style-cast]
+                        GPIOA->ODR |= (1<<i); // reset
+                        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(33): warning: use of old-style cast [-Wold-style-cast]
+                        GPIOA->ODR |= (1<<i); // reset
+                        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(42): warning: use of old-style cast [-Wold-style-cast]
+                                        GPIOA->ODR &=~ (1<<i); // turn LED on
+                                        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(42): warning: use of old-style cast [-Wold-style-cast]
+                                        GPIOA->ODR &=~ (1<<i); // turn LED on
+                                        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(44): warning: use of old-style cast [-Wold-style-cast]
+                                GPIOA->ODR |= (1<<i);
+                                ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(44): warning: use of old-style cast [-Wold-style-cast]
+                                GPIOA->ODR |= (1<<i);
+                                ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(50): warning: use of old-style cast [-Wold-style-cast]
+                                        GPIOA->ODR &=~ (1<<i); // turn LED on
+                                        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(50): warning: use of old-style cast [-Wold-style-cast]
+                                        GPIOA->ODR &=~ (1<<i); // turn LED on
+                                        ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(52): warning: use of old-style cast [-Wold-style-cast]
+                                GPIOA->ODR |= (1<<i);
+                                ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1320): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1288): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1279): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(52): warning: use of old-style cast [-Wold-style-cast]
+                                GPIOA->ODR |= (1<<i);
+                                ^~~~~
+C:/Users/Korisnik/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(1413): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(59): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+}
+ ^
+35 warnings generated.
+compiling main.cpp...
+linking...
+Program Size: Code=888 RO-data=268 RW-data=4 ZI-data=1632  
+FromELF: creating hex file...
+".\Objects\project1.axf" - 0 Error(s), 35 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C4
+  .\RTE\_Target_1
+  C:\Users\Korisnik\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\Korisnik\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\startup_stm32f10x_ld.s
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
