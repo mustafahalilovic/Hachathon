@@ -1,0 +1,5 @@
+C:\Users\Korisnik\Desktop\C#\Minesweeper\Minesweeper\obj\Debug\net6.0-windows\Minesweeper.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\C#\Minesweeper\Minesweeper\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Korisnik\Desktop\C#\Minesweeper\Minesweeper\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Korisnik\Desktop\C#\Minesweeper\Minesweeper\obj\Debug\net6.0-windows\Minesweeper_MarkupCompile.cache
+C:\Users\Korisnik\Desktop\C#\Minesweeper\Minesweeper\obj\Debug\net6.0-windows\Minesweeper_MarkupCompile.lref
