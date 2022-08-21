@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+
+    #root{
+      --pale-blue: hsl(225, 100%, 94%);
+      --bright-blue: hsl(245, 75%, 52%);
+      --very-pale-blue: hsl(225, 100%, 98%);
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --dark-blue:  hsl(223, 47%, 23%) ;
+
+      --ff: "Red Hat Display", sans-serif;
+    }
+
+    body{
+      background: url(images/pattern-background-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 0px;
+    }
+
+    .attribution {
+       font-size: 11px;
+       text-align: center;
+       margin: 2em;
+     }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .main{
+      width: 20em;
+      height: 35em;
+      border-radius: 1.5em;
+      margin: auto auto;
+      margin-top: 10vh;
+
+    }
+    .picture{
+      height: 30%;
+      background: url(images/illustration-hero.svg);
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 1.5em;
+      border-top-right-radius: 1.5em;
+      margin-bottom: 0px;
+    }
+
+    .main2{
+      height: 70.5%;
+      background-color: white;
+      background-size: cover;
+      border-bottom-left-radius: 1.5em;
+      border-bottom-right-radius: 1.5em;
+    }
+
+    .main2 > header{
+     width: auto;
+     height: 20%;
+     display: flex;
+    }
+
+    .main2 > header > h1{
+      font-family: "Red Hat Display", sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      justify-content: center;
+      margin: auto;
+    }
+
+    .main2 > p{
+      width: auto;
+      height: 20%;
+      margin: 0px;
+      font-weight: 500;
+      font-family: "Red Hat Display", sans-serif;
+      font-size: 16px;
+      color: rgb(124, 141, 156);
+      text-align: center;
+    }
+
+    .annual-p{
+      width: auto;
+      height: 22%;
+      background-color: hsl(225, 100%, 98%);
+      border-radius: 15px;
+      margin: 1.5em;
+      display: flex;
+      font-family: "Red Hat Display", sans-serif;
+    }
+
+    .annual-p > img{
+      margin: 0.75em;
+    }
+
+    .second-el{
+      margin-top: 1em;
+    }
+
+    .second-el > h4{
+      margin: 0px;
+    }
+    .second-el > span{
+      margin: 0px;
+      font-size: 16px;
+      color: rgb(124, 141, 156);
+    }
+
+    .annual-p > a{
+      margin-top: 2em;
+      margin-left: 3em;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .ptp{
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 0.75em 2em;
+      border-radius: 10px;
+      border: 0px;
+      color: white;
+      background-color: hsl(245, 75%, 52%);
+      margin-left: 1.5em;
+      margin-right:  1.5em;
+      width: auto;
+      margin-top: -0.5em;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 10px;
+      text-align: center;
+      }
+
+      .co{
+        font-size: 16px;
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: bold;
+        padding: 0.75em 2em;
+        border-radius: 10px;
+        border: 0px;
+        color: rgb(103, 106, 112);
+        background-color: white;
+        margin-left: 1.5em;
+        margin-right:  1.5em;
+        padding: 0px;
+        margin-top: 1em;
+        width: auto;
+        text-align: center;
+        }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="main">
+    <div class="picture">
+
+    </div>
+    <div class="main2">
+      <header>
+        <h1>Order Summary</h1>
+      </header>
+        <p>You can now listen to millions if <br>
+        songs, audiobooks, and podcasts on <br>
+      any device anywhere </p>
+      <div class="annual-p">
+        <img src="images/icon-music.svg" alt="MUSIC LOGO">
+        <div class="second-el">
+          <h4> Annual Plan </h4>
+          <span>$59.99/year</span>
+        </div>
+        <a href="#">Change</a>
+      </div>
+      <div class="btn">
+        <div class="ptp">
+          Proceed to Payment
+        </div>
+        <div class="co">
+          Cancel Order
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Mustafa</a>.
+  </div>
+
+</body>
+</html>
