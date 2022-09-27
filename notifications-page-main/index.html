@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+  <title> Frontend Mentor | Notifications page </title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color:  hsl(210, 60%, 98%);
+      font-size: 1em;
+      margin: 0;
+      padding: 2em;
+    }
+
+    .not a img{
+      height: 3.5em;
+      width: 3.5em;
+    }
+
+    .header{
+      display: flex;
+      flex-grow: 1;
+      font-size: 1.5em;
+    }
+    a{
+      color: black;
+    }
+
+    #ntbr{
+      font-size: 0.7em;
+      margin-top: 0.1em;
+      margin-left: 0.5em;
+      margin-bottom: 1em;
+      color: white;
+      border-radius: 0.3em;
+      padding: 0.1em 0.5em;
+      background:  hsl(219, 85%, 26%);
+    }
+
+    .not a{
+      display: flex;
+      flex-grow: 1;
+      padding: 0.7em;
+      border-radius: 0.5em;
+      margin-bottom: 0.5em;
+    }
+    .not{
+      border-radius: 0.5em;
+    }
+
+    .main{
+      padding: 2em;
+      width: 60vw;
+      height: 85vh;
+      background-color: hsl(0, 0%, 100%);
+      margin: auto;
+      border-radius: 1.5em;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+	.header a{
+		font-size: 0.6em;
+		color: hsl(219, 14%, 63%);
+		font-weight: bold;
+		margin-left: 60%;
+		margin-top: 1%;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	 .time{
+		color: hsl(219, 14%, 63%);
+		}
+
+	.group, .post{
+		color: hsl(219, 12%, 42%);
+		font-weight: bold;
+	}
+	.content {
+		margin-left: 1em;
+	}
+
+	.ntext {
+		color: hsl(259, 17%, 65%);
+	}
+
+	.msg{
+		width: 90%;
+		padding: 0.3em;
+		border: 1px solid hsl(259, 17%, 65%);
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		font-weight: 500;
+		color: hsl(219, 12%, 42%);
+		}
+
+	.img{
+		margin-left: 40%;
+		margin-right: 1em;
+	}
+
+
+	.notification-status{
+		height: 0.5em;
+		width: 0.5em;
+		border-radius: 50%;
+		background-color: hsl(1, 90%, 64%);
+		margin: 0.3em;
+	}
+
+	.message .ntext{
+		display: flex;
+		flex-grow: 1;
+	}
+
+	.comment .ntext{
+		display: flex;
+		flex-grow: 1;
+		margin-left: 0;
+	}
+
+	#maar: active{
+		.notification-status{
+			display:none;
+		}
+	}
+
+	#maar:hover{
+		color: blue;
+	}
+
+	.post:hover{
+		color: blue;
+	}
+	.group:hover{
+		color:blue;
+	}
+
+	.msg:hover{
+		background-color: hsl(205, 33%, 90%);
+		border: 0;
+	}
+	.msg{
+		border-radius: .5em;
+	}
+
+
+  </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="header">
+            <div class="notification">
+              <strong>Notifications</strong>
+            </div>
+          <div id="ntbr">
+            7
+          </div>
+		  <a href="#" id="maar" onclick="func1()"> Mark all as read </a>
+        </div>
+        <div class="notif">
+          <div class="not reaction">
+            <a href="#" onclick="notDown(1)">
+              <img src="images/avatar-mark-webber.webp" alt="">
+              <div class="content">
+                <div class="ntext">
+                  <span> <strong style="color:black">  Mark Webber </strong>
+                   reacted to your recent post
+                   <span class="post">My first tournament today!</span>
+                  </span>
+                </div>
+                <span class="time">1m ago</span>
+              </div>
+              <div class="notification-status"></div>
+            </a>
+          </div>
+          <div class="not follow">
+            <a href="#" onclick="notDown(2)">
+              <img src="images/avatar-angela-gray.webp" alt="">
+              <div class="content">
+                <div class="ntext">
+                  <span> <strong style="color:black" class="name">Angela Gray</strong>
+                   followed you </span>
+                </div>
+                <span class="time">5m ago</span>
+              </div>
+			   <div class="notification-status"></div>
+            </a>
+          </div>
+          <div class="not join">
+            <a href="#" onclick="notDown(3)">
+              <img src="images/avatar-jacob-thompson.webp" alt="">
+              <div class="content">
+                <div class="ntext">
+                    <span> <strong style="color:black" class="name">Jacob Thompson</strong>
+                    has joined your group
+                    <span class="group">Chess Club</span>
+                    </span>
+                </div>
+                <span class="time">1day ago</span>
+              </div>
+                  <div class="notification-status"></div>
+            </a>
+          </div>
+          <div class="not message">
+              <a href="#" onclick="notDown(4)">
+                <img src="images/avatar-rizky-hasanuddin.webp" alt="" style="width: 5.5em;">
+                <div class="content">
+                  <div class="ntext">
+                      <span> <strong style="color:black" class="name">Rizky Hasanuddin </strong>
+                      sent you private message </span>
+					  <div class="notification-status"></div>
+                  </div>
+                  <span class="time">5days ago</span>
+                  <div class="msg">
+                    Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+                    I'm already having lots of fun and improving my game.
+                  </div>
+                </div>
+              </a>
+            </div>
+          <div class="not comment">
+            <a href="#" onclick="notDown(5)">
+              <img src="images/avatar-kimberly-smith.webp" alt="" style="width: 4em;">
+              <div class="content">
+                <div class="ntext">
+                    <span> <strong style="color:black" class="name">Kimberly Smith </strong>
+                    commented on your picture </span>
+                  <div class="notification-status"></div>
+                </div>
+                <span class="time">1week ago</span>
+              </div>
+              <div class="img">
+                <img src="images/image-chess.webp" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="not reaction r2">
+            <a href="#" onclick="notDown(6)">
+              <img src="images/avatar-nathan-peterson.webp" alt="" style="width: 4em;">
+              <div class="content">
+                <div class="ntext">
+                  <span> <strong style="color:black" class="name">Nathan Peterson</strong>
+                   reacted to your recent post
+                   <span class="post">5 end-game strategies to
+                   increase your win rate </span>
+                  </span>
+                </div>
+                <span class="time">2weeks ago</span>
+              </div>
+                  <div class="notification-status"></div>
+            </a>
+          </div>
+          <div class="not left">
+            <a href="#" onclick="notDown(7)">
+              <img src="images/avatar-anna-kim.webp" alt="" style="width: 4em;">
+              <div class="content">
+                <div class="ntext">
+                    <span> <strong style="color:black" class="name">Anna Kim</strong>
+                    has left the group
+                    <span class="group">Chess Club</span>
+                    </span>
+                </div>
+                <span class="time">2weeks ago</span>
+              </div>
+                  <div class="notification-status"></div>
+            </a>
+          </div>
+        </div>
+  </div>
+
+  <script type="text/javascript">
+	function func1()
+	{
+		const krug = document.getElementsByClassName('notification-status');
+		for (var i = 0; i < krug.length; i++) {
+		krug[i].style.display = 'none';
+		}
+		document.getElementById('ntbr').innerHTML = "0";
+		const back = document.getElementsByClassName("not");
+		for (var i = 0; i < back.length; i++) {
+		back[i].style.background = "hsl(205, 33%, 90%)";
+		}
+	}
+
+	function notDown(arg)
+	{
+		/*let notBr = parseInt(document.getElementById('ntbr').innerHTML);
+		if(notBr!=0) notBr--;
+		console.log(notBr);
+		document.getElementById('ntbr').innerHTML = toString(notBr);*/
+		 //document.getElementById('ab').style.background =  "hsl(205, 33%, 90%)";
+		 var od =0;
+		 switch(arg)
+		 {
+			case 1:
+			if((document.querySelector(".reaction .notification-status").style.display) != "none") od=1;
+      else od = 0;
+			document.querySelector(".reaction a").style.background =  "hsl(205, 33%, 90%)";
+			document.querySelector(".reaction .notification-status").style.display =  "none";
+			break;
+			case 2:
+      if((document.querySelector(".follow .notification-status").style.display) != "none") od=1;
+      else od = 0;
+			document.querySelector(".follow a").style.background =  "hsl(205, 33%, 90%)";
+			document.querySelector(".follow .notification-status").style.display =  "none";
+			break;
+			case 3:
+      if((document.querySelector(".join .notification-status").style.display) != "none") od=1;
+      else od = 0;
+			document.querySelector(".join a").style.background =  "hsl(205, 33%, 90%)";
+			document.querySelector(".join .notification-status").style.display =  "none";
+			break;
+			case 4:
+      if((document.querySelector(".message .notification-status").style.display) != "none") od=1;
+      else od = 0;
+			document.querySelector(".message a").style.background =  "hsl(205, 33%, 90%)";
+			document.querySelector(".message .notification-status").style.display =  "none";
+			break;
+			case 5:
+      if((document.querySelector(".comment .notification-status").style.display) != "none") od=1;
+      else od = 0;
+			document.querySelector(".comment a").style.background =  "hsl(205, 33%, 90%)";
+			document.querySelector(".comment .notification-status").style.display =  "none";
+			break;
+			case 6:
+      if((document.querySelector(".r2 .notification-status").style.display) != "none") od=1;
+      else od = 0;
+			document.querySelector(".r2 a").style.background =  "hsl(205, 33%, 90%)";
+			document.querySelector(".r2 .notification-status").style.display =  "none";
+			break;
+			case 7:
+      if((document.querySelector(".left .notification-status").style.display) != "none") od=1;
+      else od = 0;
+			document.querySelector(".left a").style.background =  "hsl(205, 33%, 90%)";
+			document.querySelector(".left .notification-status").style.display =  "none";
+			break;
+		 }
+
+		if(od==1)
+		{
+			var a = document.getElementById('ntbr').innerHTML;
+			a = parseInt(a);
+			if(a!=0) a--;
+			document.getElementById('ntbr').innerHTML = a;
+		}
+
+	}
+
+	</script>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Mustafa Halilovic</a>.
+  </div>
+</body>
+</html>
